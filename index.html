@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybersecurity Portfolio | Kishore</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0d1117;
+      color: #e6edf3;
+    }
+
+    /* ---------- NAVIGATION ---------- */
+    nav {
+      background-color: #161b22;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #21262d;
+    }
+
+    nav a {
+      color: #58a6ff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #79c0ff;
+      text-shadow: 0 0 10px #58a6ff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      background-color: #161b22;
+      padding: 3rem 0;
+      text-align: center;
+      position: relative;
+    }
+
+    header img {
+      width: 200px; /* bigger photo */
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid #58a6ff;
+      box-shadow: 0 0 25px #58a6ff, 0 0 50px #58a6ff;
+      animation: glowPulse 3s infinite ease-in-out;
+    }
+
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 20px #58a6ff, 0 0 40px #58a6ff; }
+      50% { box-shadow: 0 0 35px #79c0ff, 0 0 70px #79c0ff; }
+      100% { box-shadow: 0 0 20px #58a6ff, 0 0 40px #58a6ff; }
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: #58a6ff;
+      text-shadow: 0 0 10px #58a6ff;
+    }
+
+    header p {
+      color: #79c0ff;
+      font-size: 1.3rem;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      border-bottom: 2px solid #58a6ff;
+      display: inline-block;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px #58a6ff;
+    }
+
+    .skills, .projects, .certifications {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* ---------- CARD DESIGN ---------- */
+    .card {
+      background-color: #161b22;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(88,166,255,0.2);
+      border: 1px solid rgba(88,166,255,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* glowing border animation */
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, #58a6ff, #79c0ff, #1f6feb, #58a6ff);
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(10px);
+      opacity: 0.5;
+      border-radius: 12px;
+      animation: borderGlow 6s linear infinite;
+    }
+
+    @keyframes borderGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 25px rgba(88,166,255,0.4);
+    }
+
+    .card h3 {
+      color: #58a6ff;
+      margin-top: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #161b22;
+      color: #8b949e;
+    }
+
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    p, li {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <img src="kishore 2.jpg" alt="Kishore's Photo">
+    <h1>Kishore</h1>
+    <p>Cybersecurity Student | Ethical Hacker | Network Defender</p>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a cybersecurity student passionate about protecting digital environments and uncovering vulnerabilities before they can be exploited.
+      My interests include ethical hacking, network defense, and digital forensics.
+      I enjoy working with tools like Wireshark, Metasploit, Nmap, and Kali Linux to strengthen system security.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>Penetration Testing</li>
+          <li>Network Security</li>
+          <li>Digital Forensics</li>
+          <li>Risk Assessment</li>
+          <li>Malware Analysis</li>
+          <li>Incident Response</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Tools</h3>
+        <ul>
+          <li>Kali Linux</li>
+          <li>Wireshark</li>
+          <li>Metasploit</li>
+          <li>Nmap</li>
+          <li>Burp Suite</li>
+          <li>John the Ripper</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Problem Solving</li>
+          <li>Team Collaboration</li>
+          <li>Analytical Thinking</li>
+          <li>Attention to Detail</li>
+          <li>Communication</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Vulnerability Assessment Lab</h3>
+        <p>
+          Conducted a simulated network security test using Nmap and Metasploit to identify and patch vulnerabilities.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Wireshark Traffic Analysis</h3>
+        <p>
+          Captured and analyzed network packets to detect suspicious activity and potential data leaks.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Password Strength Evaluator</h3>
+        <p>
+          Developed a Python tool to test password strength and suggest improvements using entropy calculations.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Phishing Simulation</h3>
+        <p>
+          Created a phishing awareness project to educate users on email security, social engineering, and safe browsing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="certifications">
+      <div class="card">
+        <h3>CEH (Certified Ethical Hacker)</h3>
+        <p>EC-Council Certification validating ethical hacking skills and methodologies.</p>
+      </div>
+      <div class="card">
+        <h3>CompTIA Security+</h3>
+        <p>Demonstrates core security knowledge in network defense, cryptography, and risk management.</p>
+      </div>
+      <div class="card">
+        <h3>TryHackMe / Hack The Box</h3>
+        <p>Completed multiple labs and challenges to strengthen penetration testing and CTF skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:mrkishorkishor4@email.com">mrkishorekishore4@email.com</a></p>
+    <p>GitHub: <a href="https://github.com/mrkishore28" target="_blank">github.com/mrkishore28</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/kishore" target="_blank">linkedin.com/in/kishore</a></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Kishore. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
